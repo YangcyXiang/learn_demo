@@ -6,3 +6,9 @@ tags
 lint.log script src
 async_fifo_syn.v
 lint.log
+
+# ignore anything in modelsim folder
+modelsim/*
+
+# but do not ignore modelsim/tb
+!modelsim/tb/
