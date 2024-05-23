@@ -10,7 +10,7 @@ echo "in modelsim PRJ_DESIGN=$PRJ_DESIGN"
 
 # 001 async_fifo_unit_test.sv
 vlib work
-vlog ./tb/one_cycle_sync_tb.sv ../one_cycle_sync.v
+vlog ./tb/one_cycle_sync_tb.sv ../one_cycle_sync_new.v
 vsim -t ns -novopt +notimingchecks work.one_cycle_sync_tb
 radix hex
 add wave sim:/one_cycle_sync_tb/*

@@ -1,3 +1,5 @@
+*.exe
+
 # ignore anything in modelsim folder
 modelsim/*
 

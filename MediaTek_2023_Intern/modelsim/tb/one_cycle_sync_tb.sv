@@ -2,6 +2,7 @@
 `default_nettype none
 
 module one_cycle_sync_tb;
+    reg             arstn;
     reg             clk;
     reg     [7:0]   in;
     wire    [7:0]   pedge;
@@ -11,6 +12,10 @@ module one_cycle_sync_tb;
     always #5 clk <= ~clk;
 
     initial begin
+        arstn = 0;
+        in = 8'h0;
+        #30
+        arstn = 1;
         #22
         in = 8'h2;
         #40
@@ -21,7 +26,8 @@ module one_cycle_sync_tb;
         in = 8'h2;
     end
 
-    one_cycle_sync dut(
+    one_cycle_sync_new dut(
+        .arstn  (arstn  ),
         .clk    (clk    ),
         .in     (in     ),
         .pedge  (pedge  )
