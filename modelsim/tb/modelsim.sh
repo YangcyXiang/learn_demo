@@ -5,15 +5,15 @@
 # global settings
 set PRJ_ROOT D:/Workspace/learn_demo/Digital_IC_Learn
 echo "in modelsim PRJ_ROOT=$PRJ_ROOT"
-set PRJ_DESIGN $PRJ_ROOT/MediaTek_2023_Intern
+set PRJ_DESIGN $PRJ_ROOT/<path to current folder modelsim/tb>
 echo "in modelsim PRJ_DESIGN=$PRJ_DESIGN"
 
 # 001 async_fifo_unit_test.sv
 vlib work
-vlog ./tb/one_cycle_sync_tb.sv ../one_cycle_sync_new.v
-vsim -t ns -novopt +notimingchecks work.one_cycle_sync_tb
+vlog ./tb/<tb_module_name>.sv ../<module_name>.v
+vsim -t ns -novopt +notimingchecks work.<tb_module_name>
 radix hex
-add wave sim:/one_cycle_sync_tb/*
-add wave sim:/one_cycle_sync_tb/dut/*
+add wave sim:/<tb_module_name>/*
+add wave sim:/<tb_module_name>/dut/*
 # run -all
 run 1us

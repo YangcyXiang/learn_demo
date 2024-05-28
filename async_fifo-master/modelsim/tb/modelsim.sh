@@ -3,7 +3,7 @@
 # ~$ /d/Workspace/modelsim_utils/run
 
 # global settings
-set PRJ_ROOT D:/Workspace/verilog_demo
+set PRJ_ROOT D:/Workspace/learn_demo
 echo "in modelsim PRJ_ROOT=$PRJ_ROOT"
 set PRJ_DESIGN $PRJ_ROOT/async_fifo-master
 echo "in modelsim PRJ_DESIGN=$PRJ_DESIGN"
