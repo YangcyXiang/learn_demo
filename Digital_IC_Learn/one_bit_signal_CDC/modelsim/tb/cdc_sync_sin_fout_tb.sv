@@ -15,10 +15,10 @@ module cdc_sync_sin_fout_tb;
     always #3 fast_clk <= ~fast_clk;
 
     initial begin
-        arstn = 0;
+        reset_n = 0;
         signal_in_slow = 8'h0;
         #30
-        arstn = 1;
+        reset_n = 1;
         #22
         signal_in_slow = 8'h2;
         #40

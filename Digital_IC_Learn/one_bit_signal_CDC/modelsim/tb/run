@@ -1,7 +1,7 @@
 # global settings in bash
 export PRJ_ROOT=/d/Workspace/learn_demo/Digital_IC_Learn
 echo "in shell PRJ_ROOT=$PRJ_ROOT"
-export PRJ_DESIGN=$PRJ_ROOT/<path to current folder modelsim/tb>
+export PRJ_DESIGN=$PRJ_ROOT/one_bit_signal_CDC
 echo "in shell PRJ_DESIGN=$PRJ_DESIGN"
 export CWD=`pwd`
 

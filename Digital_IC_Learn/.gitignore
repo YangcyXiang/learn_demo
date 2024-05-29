@@ -1,0 +1,5 @@
+# ignore anything in 'subfolder/modelsim'
+*/modelsim/*
+
+# but do not ignore modelsim/tb
+!*/modelsim/tb/
