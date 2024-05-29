@@ -1,0 +1,17 @@
+# global settings in bash
+export PRJ_ROOT=/d/Workspace/learn_demo/Digital_IC_Learn
+echo "in shell PRJ_ROOT=$PRJ_ROOT"
+export PRJ_DESIGN=$PRJ_ROOT/CDC_sunburst
+echo "in shell PRJ_DESIGN=$PRJ_DESIGN"
+export CWD=`pwd`
+
+# kill open window
+/d/Workspace/learn_demo/close_modelsim_windows.bat
+
+# # copy files to current folder
+# echo "copy *.v* files from $PRJ_DESIGN to ../rtl_copy"
+# find $PRJ_DESIGN -name "*.v*" -exec cp {} ../rtl_copy \; 
+
+# launch modelsim, different in each folder
+echo "in shell run $CWD/tb/modelsim.sh"
+modelsim -do $CWD/tb/modelsim.sh
